@@ -6,4 +6,4 @@ description: "Framed slate"
 featured: true
 ---
 
-£14
+£25
