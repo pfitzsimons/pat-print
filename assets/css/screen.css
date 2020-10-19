@@ -348,6 +348,7 @@ blockquote {
     margin: 0 0 1.5rem 0;
 }
 
+/* post image */
 .featured-image {
     display: block;
     margin-bottom: 1.5rem;
@@ -786,8 +787,11 @@ iframe {
     }
 }
 
+/* card image */
 .card .img-fluid {
     width: 100%;
+    height: 250px;
+    width: 250px;
 }
 
 .sticky-top-80 {
