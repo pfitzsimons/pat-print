@@ -58,6 +58,10 @@ post_class: post-template
                 {{content}}
             </div>
 
+            {% if page.multiImageFolder %}
+                {% include image-gallery.html folder="/assets/images/xmas/" %}
+            {% endif %}
+
             <!-- Post Date -->
             <p>
             <small>
@@ -113,6 +117,3 @@ post_class: post-template
 </div>
 <!-- End Article
 ================================================== -->
-{% if page.image %}
-    {% include image-gallery.html folder="/assets/images/xmas/" %}
-{% endif %}
