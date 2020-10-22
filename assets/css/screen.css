@@ -3,6 +3,25 @@ Template Name: Mediumish
 Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
 License: https://www.wowthemes.net/freebies-license/ 
 */
+
+/* small 'Explore ->' */
+.jumbotron.fortags {
+    margin-top: 0rem;
+    padding: 0;
+    border-radius: 0;
+    background-size: cover;
+}
+
+.jumbotron.fortags a {
+    padding: 5px 10px 7px;
+    background: #222;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
 @media screen and (min-width:1500px) {
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
@@ -750,6 +769,11 @@ iframe {
 }
 
 .transpdark {
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+.transplight {
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
 }
