@@ -6,7 +6,7 @@ description: "Printed Pillowcase"
 featured: false
 ---
 
-Price: <b>£6</b>
+Price: <b>£12</b>
 
 Examples:
 
