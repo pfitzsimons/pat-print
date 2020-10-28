@@ -32,13 +32,13 @@ post_class: post-template
 
             <!-- Post Featured Image -->
             {% if page.image %}
-
-            {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-            {% else %}
-            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-            {% endif %}
-
+                {% if page.showImage %}
+                    {% if site.lazyimages == "enabled" %}
+                        <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+                    {% else %}
+                        <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+                    {% endif %}
+                {% endif %}
             {% endif %}
             <!-- End Featured Image -->
 
@@ -57,10 +57,6 @@ post_class: post-template
                 <!-- End Toc -->
                 {{content}}
             </div>
-
-            {% if page.multiImageFolder %}
-                {% include image-gallery.html folder="/assets/images/xmas/" %}
-            {% endif %}
 
             <!-- Post Date -->
             <p>
@@ -98,16 +94,7 @@ post_class: post-template
             </div>
             <!-- End Tags -->
 
-            <!-- Prev/Next -->
-            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-            {% if page.previous.url %}
-            <a class="prev d-block col-md-6" href="{{ site.baseurl }}/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="next d-block col-md-6 text-lg-right" href="{{ site.baseurl }}/{{page.next.url}}">{{page.next.title}} &raquo; </a>
-            {% endif %}
-            <div class="clearfix"></div>
-            </div>
+
             <!-- End Categories -->
 
         </div>
@@ -117,3 +104,7 @@ post_class: post-template
 </div>
 <!-- End Article
 ================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

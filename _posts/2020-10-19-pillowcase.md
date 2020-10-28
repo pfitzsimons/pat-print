@@ -6,4 +6,8 @@ description: "Printed Pillowcase"
 featured: false
 ---
 
-£6
+Price: <b>£6</b>
+
+Examples:
+
+<a data-fancybox="gallery1" href="/assets/images/pillow-case.jpeg"><img src="/assets/images/pillow-case.jpeg" width="130" height="130"></a>
