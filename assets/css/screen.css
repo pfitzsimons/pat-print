@@ -816,6 +816,9 @@ iframe {
     width: 100%;
     height: 250px;
     width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sticky-top-80 {
